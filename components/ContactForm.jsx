@@ -53,7 +53,7 @@ const ContactForm = () => {
           <div className="flex justify-left sm:col-span-2">
             <button
               type="submit"
-              className="bg-primary text-white py-2 px-6 rounded-md hover:bg-pink-700 transition"
+              className="bg-primary text-white py-2 px-16 rounded-md hover:bg-pink-700 transition"
             >
               Submit
             </button>
