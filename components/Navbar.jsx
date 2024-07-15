@@ -46,7 +46,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='container flex m-auto justify-center pt-8 z-1 relative'>
+        <nav className='container flex m-auto justify-center pt-8 z-1 absolute top-0'>
             <ul className='flex gap-6'>
                 {NavMenu.map((menu) => (
                     <li
