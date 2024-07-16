@@ -8,8 +8,8 @@ const ContactForm = () => {
             <input
               type="text"
               id="name"
-              className="p-2 bg-none border border-blue rounded"
-              placeHolder="Name"
+              className="p-2 bg-transparent border border-blue rounded"
+              placeholder="Name"
             />
           </div>
           <div className="flex flex-col">
@@ -17,7 +17,7 @@ const ContactForm = () => {
               type="text"
               id="business-name"
               className="p-2 bg-transparent border border-blue rounded"
-              placeHolder="Business Name"
+              placeholder="Business Name"
             />
           </div>
           <div className="flex flex-col">
@@ -25,7 +25,7 @@ const ContactForm = () => {
               type="text"
               id="contact-number"
               className="p-2 bg-transparent border border-blue rounded"
-              placeHolder="Contact Number"
+              placeholder="Contact Number"
             />
           </div>
           <div className="flex flex-col">
@@ -33,7 +33,7 @@ const ContactForm = () => {
               type="email"
               id="email-id"
               className="p-2 bg-transparent border border-blue rounded"
-              placeHolder="Email ID"
+              placeholder="Email ID"
             />
           </div>
           <div className="flex flex-col sm:col-span-2">
@@ -41,13 +41,14 @@ const ContactForm = () => {
               type="text"
               id="services-interested"
               className="p-2 bg-transparent border border-blue rounded"
-              placeHolder='Services Interested'
+              placeholder="Services Interested"
             />
           </div>
           <div className="flex flex-col sm:col-span-2">
             <textarea
               id="your-message"
-              className="p-2 bg-transparent border border-blue rounded h-32" placeHolder='Your Message'
+              className="p-2 bg-transparent border border-blue rounded h-32" 
+              placeholder="Your Message"
             ></textarea>
           </div>
           <div className="flex justify-left sm:col-span-2">
