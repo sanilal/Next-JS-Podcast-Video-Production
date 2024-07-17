@@ -19,7 +19,7 @@ const Hero = () => {
             className="absolute top-0 z-0 object-fit" 
             />
             <div className="absolute top-[50%] z-10 left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
-                <h1 className="text-white sm:text-6xl text-4xl font-semibold">Podcast <br /> & <br /> Video 
+                <h1 className="text-white sm:text-6xl text-4xl font-semibold mb-4">Podcast <br /> & <br /> Video 
                 Production</h1>
                 <a href="#bookNow" className="text-white bg-primary px-10 py-3 rounded-3xl text-sm mt-4">
                 Book Now

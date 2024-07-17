@@ -1,53 +1,91 @@
+"use client"
+import React, {  useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 const ContactForm = () => {
+
+  const [name, setName] = useState('')
+  const [bname, setBname] = useState('')
+  const [number, setNumber] = useState('')
+  const [email, setEmail] = useState('')
+  const [services, setServices] = useState('')
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('NEXT_PUBLIC_EMAILJS_SERVICE_ID', 'NEXT_PUBLIC_EMAILJS_TEMPLATE_ID', form.current, {
+        publicKey: 'NEXT_PUBLIC_EMAILJS_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div className="flex items-center justify-center"
     >
-      <form className="p-2 rounded-md w-full max-w-lg">
+      <form className="p-2 rounded-md w-full max-w-lg" onSubmit={sendEmail}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col">
             <input
               type="text"
               id="name"
-              className="p-2 bg-transparent border border-blue rounded"
+              value={name}
+              className="p-2 bg-transparent border border-blue rounded text-white"
               placeholder="Name"
+              onChange={(e)=>setName(e.target.value)}
             />
           </div>
           <div className="flex flex-col">
             <input
               type="text"
-              id="business-name"
-              className="p-2 bg-transparent border border-blue rounded"
+              id="bname"
+              value={bname}
+              className="p-2 bg-transparent border border-blue rounded text-white"
               placeholder="Business Name"
+              onChange={(e)=> setBname(e.target.value)}
             />
           </div>
           <div className="flex flex-col">
             <input
               type="text"
-              id="contact-number"
-              className="p-2 bg-transparent border border-blue rounded"
+              id="number"
+              value={number}
+              className="p-2 bg-transparent border border-blue rounded text-white"
               placeholder="Contact Number"
+              onChange={(e)=>setNumber(e.target.value)}
             />
           </div>
           <div className="flex flex-col">
             <input
               type="email"
-              id="email-id"
-              className="p-2 bg-transparent border border-blue rounded"
+              id="email"
+              value={email}
+              className="p-2 bg-transparent border border-blue rounded text-white"
               placeholder="Email ID"
+              onChange={(e)=>setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col sm:col-span-2">
             <input
               type="text"
-              id="services-interested"
-              className="p-2 bg-transparent border border-blue rounded"
+              id="services"
+              value={services}
+              className="p-2 bg-transparent border border-blue rounded text-white"
               placeholder="Services Interested"
+              onChange={(e)=>setServices(e.target.value)}
             />
           </div>
           <div className="flex flex-col sm:col-span-2">
             <textarea
               id="your-message"
-              className="p-2 bg-transparent border border-blue rounded h-32" 
+              className="p-2 bg-transparent border border-blue rounded h-32 text-white" 
               placeholder="Your Message"
             ></textarea>
           </div>
