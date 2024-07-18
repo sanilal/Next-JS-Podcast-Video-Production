@@ -5,7 +5,7 @@ import TelIcon from "@/public/assets/call.png"
 const Footer = () => {
   return (
     <footer className="w-full flex justify-center">
-          <div className='container justify-between flex py-12 max-w-4xl'>
+          <div className='container justify-between flex py-12 max-w-4xl px-4'>
             <div className="flex justify-between w-full flex-col sm:flex-row">
                 <div className="flex flex-col justify-center items-center">
                     <Image 

@@ -29,7 +29,7 @@ const Services = () => {
     ]
   return (
     <div className="container max-w-4xl px-6 sm:px-0">
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-4 xl:gap-16 lg:gap-14 md:gap-10">
+      <div className="grid sm:grid-cols-3 grid-cols-1 gap-4 xl:gap-16 lg:gap-14 md:gap-10 px-4">
         {ServiceList.map(service => (
         <Service
           key={service.id}
